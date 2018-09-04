@@ -44,6 +44,7 @@ hexo.extend.tag.register('amzn', function(args){
       var author = '';
       switch (attr.ProductGroup){
         case 'Book':
+        case 'eBooks':
           author = attr.Author;
           break;
         case 'DVD':
@@ -55,6 +56,9 @@ hexo.extend.tag.register('amzn', function(args){
         default:
           author = attr.Brand;
           break;
+      }
+      if (typeof author === "undefined") {
+          author = '';
       }
       if(author.isArray){
         author = author.join(', ');
