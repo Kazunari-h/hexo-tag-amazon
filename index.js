@@ -38,7 +38,7 @@ hexo.extend.tag.register('amzn', function(args){
     if(result){
       var item = result.Items.Item;
       var url = item.DetailPageURL;
-      var thumb = item.MediumImage.URL;
+      var thumb = item.LargeImage.URL;
 
       var attr = item.ItemAttributes;
       var author = '';
