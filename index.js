@@ -80,7 +80,7 @@ hexo.extend.tag.register('amzn', function(args){
       if(releaseDate) code += '<span class="hexo-tag-amazon-releaseDate">'+releaseDate+'</span>';
       if(price) code += '<span class="hexo-tag-amazon-price">'+price+'</span>';
       code += '</div>'
-      +'<a href="'+url+'" class="hexo-tag-amazon-link">Buy</a>'
+      +'<a href="'+url+'" class="hexo-tag-amazon-link">'+hexo.config.amazon_plugin.button_text+'</a>'
       +'</figcaption>'
       +'</figure>';
     }else{
